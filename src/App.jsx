@@ -1,11 +1,14 @@
-const nome = "Pedro";
 import Header from "./Components/Header";
+import Main from "./Components/Main";
+import Footer from "./Components/Footer"
+import "./globals.css"
+
 export default function App(){
   return(
-    <main>
+    <div>
       <Header/>
-      <Header/>
-      <Header/>
-    </main>
+      <Main/>
+      <Footer/>
+    </div>
   );
 }

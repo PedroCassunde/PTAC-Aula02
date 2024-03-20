@@ -1,6 +1,8 @@
 export default function Header(){
 
     return(
-        <footer>Desenvolvido por Pedro Cassunde</footer>
+        <footer>
+            <p>Desenvolvido por Pedro Cassunde</p>  
+            </footer>
     );
-}
+} 
