@@ -3,6 +3,12 @@ import { useState } from "react";
 export default function Main() {
     const [nome, setNome] = useState("");
     const [telefone, setTelefone] = useState("");
+    const [listaContatos, setListaContatos] = useState([]);
+    const [email, setEmail] = useState([]);
+
+    const registrar = () =>{
+        alert
+    }
 
     return(
         <main>
