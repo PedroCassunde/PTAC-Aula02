@@ -4,15 +4,20 @@ export default function Main() {
     const [nome, setNome] = useState("");
     const [telefone, setTelefone] = useState("");
     const [listaContatos, setListaContatos] = useState([]);
-    const [email, setEmail] = useState([]);
 
-    const registrar = () =>{
-        alert
+    const registrar = (event) =>{
+        event.preventDefault();
+        alert("Deu certo!");
+        setListaContatos([...listaContatos,
+        {
+            nomeSalvo: nome,
+            telefoneSalvo: telefone,
+        }]);
     }
-
+console.table(listaContatos)
     return(
         <main>
-            <form>
+            <form onSubmit={registrar}>
                 <label htmlForm="Nome">
                     Nome de Contato
                 </label>
@@ -29,13 +34,16 @@ export default function Main() {
             </label>
             <input
             type="tel"
-            tel=""
             id="telefone"
             onChange={(event)=> setTelefone(event.target.value)}/>
             <button>Salvar</button>
             </form>
+            <div>
+            { listaContatos.map((contato, index)=>
+            <p key={index}>{contato.nomeSalvo}</p>)}
             {nome}
             {telefone}
+            </div>
             </main>
     );
 }
